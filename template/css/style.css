@@ -68,8 +68,12 @@ section{
 }
 
 .slider2i{
-  display: none;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   opacity: 0;
+
   transition: opacity 500ms cubic-bezier(.445,.05,.55,.95),visibility 500ms cubic-bezier(.445,.05,.55,.95);
 }
 
