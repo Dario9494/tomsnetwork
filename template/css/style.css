@@ -44,3 +44,19 @@ section{
   border-radius: 20px;
   box-shadow: 0 2px 3px 3px #00000036;
 }
+
+.btnScopri{
+  width:250px;
+  text-transform: uppercase;
+  color: #fff;
+  border:1px solid #fff;
+  border-radius: 20px;
+  height: 40px;
+  line-height: 2.3em;
+  background-color: transparent;
+  box-shadow: 0 2px 3px 3px #00000036;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
