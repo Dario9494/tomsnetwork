@@ -4,6 +4,16 @@
   src: url(../template/fonts/Poppins/Poppins-Regular.ttf);
 }
 
+@keyframes slideRight {
+  from {
+    left: 0;
+  }
+
+  to {
+    left:100%;
+  }
+}
+
 body{
   font-family: Poppins;
 }
@@ -84,4 +94,30 @@ section{
 
 .attivas2I{
   display: block;
+}
+
+.vantaggiImmagine{
+  position: relative;
+  overflow: hidden;
+}
+
+.overlayScomparsa{
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  border-radius: 20px;
+  animation: slideRight 1s normal forwards ease-in-out;
+}
+
+.fotoEvento{
+  text-align: center;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 300px;
+  box-shadow: 0 0 0 8px #db2026;
 }
