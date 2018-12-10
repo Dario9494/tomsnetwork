@@ -60,3 +60,24 @@ section{
   cursor: pointer;
   margin-top: 20px;
 }
+
+#slider2{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.slider2i{
+  display: none;
+  opacity: 0;
+  transition: opacity 500ms cubic-bezier(.445,.05,.55,.95),visibility 500ms cubic-bezier(.445,.05,.55,.95);
+}
+
+.slider2i > img{
+  width: 500px;
+  height: 500px;
+}
+
+.attivas2I{
+  display: block;
+}

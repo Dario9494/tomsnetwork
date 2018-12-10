@@ -122,9 +122,9 @@
   <section class="partner">
     <div class="container-fluid p-0">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12" style="position:relative;">
           <h3 id="nomePartner">Quei due sul server</h3>
-          <div class="slider">
+          <div id="slider">
             <div style="border-radius:20px"><img style="border-radius:20px;"src="https://via.placeholder.com/400x400" class="img-fluid"></div>
             <div style="border-radius:20px"><img style="border-radius:20px;"src="https://via.placeholder.com/400x400" class="img-fluid"></div>
             <div style="border-radius:20px"><img style="border-radius:20px;"src="https://via.placeholder.com/400x400" class="img-fluid"></div>
@@ -133,6 +133,14 @@
             <div style="border-radius:20px"><img style="border-radius:20px;"src="https://via.placeholder.com/400x400" class="img-fluid"></div>
             <div style="border-radius:20px"><img style="border-radius:20px;"src="https://via.placeholder.com/400x400" class="img-fluid"></div>
             <div style="border-radius:20px"><img style="border-radius:20px;"src="https://via.placeholder.com/400x400" class="img-fluid"></div>
+          </div>
+          <div id="slider2">
+            <div class="slider2i attivas2I" data-id="1"><img src="https://pbs.twimg.com/profile_images/558526857755099137/L28oGQ-_.jpeg"></div>
+            <div class="slider2i" data-id="2"><img src="http://www.lestradedelpaesaggio.com/old/media/k2/items/cache/802a9daf23bff040c546f525d4bd22bc_XL.jpg"></div>
+            <div class="slider2i" data-id="3"><img src="http://www.tubeshopitalia.it/wp-content/uploads/2017/09/Categoria-youtuber-Quei-Due-Sul-Server.jpg"></div>
+            <div class="slider2i" data-id="4"><img src="https://via.placeholder.com/500x500"></div>
+            <div class="slider2i" data-id="5"><img src="https://via.placeholder.com/500x500"></div>
+            <div class="slider2i" data-id="6"><img src="https://via.placeholder.com/500x500"></div>
           </div>
         </div>
       </div>
@@ -145,8 +153,26 @@
   <script src="template/js/bootstrap.bundle.min.js"></script>
   <script src="template/js/slick.min.js"></script>
   <script>
+  var cont = 6;
+  var tempo = 1;
+  function switchPartner(){
+     if(tempo != cont)
+     {
+        $(".slider2i[data-id="+tempo+"]").css("opacity","0");
+        $(".slider2i[data-id="+tempo+"]").removeClass("attivas2I");
+       tempo++;
+        $(".slider2i[data-id="+tempo+"]").addClass("attivas2I");
+        $(".slider2i[data-id="+tempo+"]").css("opacity","1");
+     }else{
+       $(".slider2i[data-id="+tempo+"]").removeClass("attivas2I");
+       tempo = 1;
+       $(".slider2i[data-id="+tempo+"]").addClass("attivas2I");
+     }
+  }
+
+
   $(document).ready(function(){
-    $('.slider').slick({
+    $('#slider').slick({
       speed: 5000,
     autoplay: true,
     autoplaySpeed: 0,
@@ -158,9 +184,17 @@
     infinite: true,
     initialSlide: 1,
     arrows: false,
-    buttons: false
+    buttons: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    dots: false
     });
+
+    setInterval(switchPartner, 5000);
+
+
   });
+
   </script>
 </body>
 
